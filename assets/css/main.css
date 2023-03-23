@@ -78,9 +78,32 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.logo {
+  margin-right: 1.5rem !important;
+}
+.link-dark,
+.link-dark:focus,
+.link-dark:hover {
+    color: #f1f1f1 !important;
+}
+.hover-yellow:hover{
+  color:#ffc107!important;
+}
 
+/* #212529
+#ffc107 */
+.nav-link-active,
+.nav-link-active:hover
+{
+  color:rgba(246, 210, 101, 0.381)!important;
+  cursor:default;
+}
+.icon-social-media{
+  width:24px;
+  height:24px;
+  display: block;
+}
 
- 
 
 /* ==========================================================================
    Helper classes
@@ -174,10 +197,7 @@ textarea {
   /* Style adjustments for viewports that meet the condition */
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -255,5 +275,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
-

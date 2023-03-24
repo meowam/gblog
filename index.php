@@ -2,92 +2,299 @@
 require($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
 ?>
 
-
-
-
 <div class="content">
-    <div class="p-3 m-0 border-0 bd-example bd-example-row">
+    <div class="p-3  m-0 border-0 bd-example bd-example-row" style="padding: 1rem 0rem!important;">
         <div class="row mb-2">
-            <h3>Останні новини та оновлення</h3>
+            <?php
+            require($_SERVER['DOCUMENT_ROOT'] . '/tier-list.php');
+            ?>
+            <div class="elementor-widget-container mb-3 mt-2">
+                <h2 class="elementor-heading-title elementor-size-default">Останні новини та оновлення</h2>
+            </div>
             <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-2 shadow-sm h-md-250 position-relative">
                     <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-primary">World</strong>
-                        <h3 class="mb-0">Featured post</h3>
-                        <div class="mb-1 text-muted">Nov 12</div>
-                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="stretched-link">Continue reading</a>
+                        <strong class="d-inline-block mb-3 text-success">Новини</strong>
+                        <h4 class="mb-3 overflow-hidden" style="max-height: 27px;">Collected Miscellany - "Mika: Constellatory Companion"</h3>
+                            <p class="card-text mb-auto overflow-hidden" style="max-height: 90px;text-align:justify">Gaze not on the velvety snowflakes with belittling eyes. For when the frost congeals, they can become stars of sparkling silver, offering guidance to all.</p>
+                            <div class="mb-1 text-muted">
+                                <a href="/" class="stretched-link">Continue reading</a>
+                                <p class="float-r">Nov 11</p>
+                            </div>
                     </div>
                     <div class="col-auto d-none d-lg-block">
-                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                        </svg>
+                        <img class="bd-placeholder-img" style='width:200px;height:250px; background-image:url("/assets/img/collected_miscellany.jpg");background-size: cover; background-position: left;    background-position: -59px;' alt="">
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-2 shadow-sm h-md-250 position-relative">
                     <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-success">Design</strong>
-                        <h3 class="mb-0">Post title</h3>
-                        <div class="mb-1 text-muted">Nov 11</div>
-                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="stretched-link">Continue reading</a>
+                        <strong class="d-inline-block mb-3 text-success">Новини</strong>
+                        <h4 class="mb-3 overflow-hidden" style="max-height: 27px;">"Fungus Mechanicus" Gameplay Tips</h3>
+                            <p class="card-text mb-auto overflow-hidden" style="max-height: 90px;text-align:justify">The "Fungus Mechanicus" event will be available on March 23, 2023 at 10:00 (Server Time). The friends whom you made during the inaugural Nilotpala Cup Beast Tamers Tournament have come up with a new game. All the best for the challenges!</p>
+                            <div class="mb-1 text-muted">
+                                <a href="/" class="stretched-link">Continue reading</a>
+                                <p class="float-r">Nov 11</p>
+                            </div>
                     </div>
                     <div class="col-auto d-none d-lg-block">
-                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                        </svg>
+                        <img class="bd-placeholder-img" style='width:200px;height:250px; background-image:url("/assets/img/fungus_mechanicus.jpg");background-size: cover;background-position: left;' alt="">
                     </div>
                 </div>
             </div>
+
         </div>
-        <h3>5 найкращих постів за версією користувачів</h3>
-        <div class="row align-items-md-stretch">
-            <div class="col-md-6">
-                <div class="h-100 p-5 text-bg-dark rounded-3">
-                    <h2 style="margin-top: 150px;">Change the background</h2>
-                    <p>Swap the background-color utility and add a `.text-*` </p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="h-100 p-5 bg-light border rounded-3">
-                    <h2 style="margin-top: 150px; ">Add borders</h2>
-                    <p>Or, keep it light and add a border for some added definition to the boundaries of your content. </p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="h-100 p-5 text-bg-dark rounded-3">
-                    <h2 style="margin-top: 150px;">Change the background</h2>
-                    <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. </p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="h-100 p-5 bg-light border rounded-3">
-                    <h2 style="margin-top: 150px;">Change the background</h2>
-                    <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. </p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="h-100 p-5 text-bg-dark rounded-3">
-                    <h2 style="margin-top: 150px;">Change the background</h2>
-                    <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. </p>
-                </div>
-            </div>
+        <div class="elementor-widget-container mb-3 ">
+            <h2 class="elementor-heading-title elementor-size-default">5 найкращих гайдів за версією користувачів</h2>
         </div>
 
+        <div class="row align-items-md-stretch">
+            <div class="col-md-12">
+                <div class="view view-first">
+                    <img style='background-image: url(/assets/img/beidou-futured.jpg);background-size: cover;background-position-y:-10px;background-position-x:center;' />
+                    <div class="view-before">
+                        <h4 class="overflow-hidden" style="max-height:30px;">Beidou Guide: Best Build, Artifacts, Weapons, Teams, and More</h4>
+                    </div>
+                    <div class="mask">
+                        <div class="top-article-meta">
+                            <div class="cat-list">
+                                <a>Characters</a>
+                                <a>Guides</a>
+                            </div>
+                            <div class="hide-sm">
+                                <span> 9 min read</span>
+                            </div>
+                        </div>
+                        <div class="bot-article-meta">
+                            <h2>Beidou Guide: Best Build, Artifacts, Weapons, Teams, and More</h2>
+                        </div>
+                        <div class="entry-meta">
+                            <span class="entry-date">
+                                <i class="far fa-clock post-meta-icon"></i>
+                                <a rel="bookmark">
+                                    <time class="entry-date" datetime="2022-12-25T12:00:03-08:00">December 25, 2022</time>
+                                </a>
+                            </span>
+                            <span class="comment-link">
+                                <i class="far fa-comment-alt post-meta-icon"></i>
+                                <a>0 Comments</a>
+                            </span>
+                            <span class="byline">
+                                <span class="author vcard">
+                                    <i class="far fa-user post-meta-icon"></i>
+                                    <a class="url fn n" rel="author">Ethers</a>
+                                </span>
+                            </span>
+                            <span class="readmore">
+                                <a rel="post"> Read <i class="fas fa-long-arrow-alt-right post-meta-icon readmore"></i></a>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="view view-first">
+                    <img style='background-image: url(/assets/img/xiao-futured1.jpg);background-size:cover;background-position: center;' />
+                    <div class="view-before">
+                        <h4 class="overflow-hidden" style="max-height:30px;">Xiao Guide: Best Build, Artifacts, Weapons, Teams, and More</h4>
+                    </div>
+                    <div class="mask">
+                        <div class="top-article-meta">
+                            <div class="cat-list">
+                                <a>Characters</a>
+                                <a>Guides</a>
+                            </div>
+                            <div class="hide-sm">
+                                <span> 9 min read</span>
+                            </div>
+                        </div>
+                        <div class="bot-article-meta">
+                            <h2>Xiao Guide: Best Build, Artifacts, Weapons, Teams, and More</h2>
+                        </div>
+                        <div class="entry-meta">
+                            <span class="entry-date">
+                                <i class="far fa-clock post-meta-icon"></i>
+                                <a rel="bookmark">
+                                    <time class="entry-date" datetime="2022-12-25T12:00:03-08:00">December 25, 2022</time>
+                                </a>
+                            </span>
+                            <span class="comment-link">
+                                <i class="far fa-comment-alt post-meta-icon"></i>
+                                <a>0 Comments</a>
+                            </span>
+                            <span class="byline">
+                                <span class="author vcard">
+                                    <i class="far fa-user post-meta-icon"></i>
+                                    <a class="url fn n" rel="author">Ethers</a>
+                                </span>
+                            </span>
+                            <span class="readmore">
+                                <a rel="post"> Read <i class="fas fa-long-arrow-alt-right post-meta-icon readmore"></i></a>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="view view-first">
+                    <img style='background-image: url(/assets/img/heroes-all-futured.jpg);background-size: cover;background-position-y: -51px;background-position-x:center;' />
+                    <div class="view-before">
+                        <h4 class="overflow-hidden" style="max-height:30px;">Absolute Beginner Guide (Everything You Need To Know)</h4>
+                    </div>
+                    <div class="mask">
+                        <div class="top-article-meta">
+                            <div class="cat-list">
+                                <a>Characters</a>
+                                <a>Guides</a>
+                            </div>
+                            <div class="hide-sm">
+                                <span> 12 min read</span>
+                            </div>
+                        </div>
+                        <div class="bot-article-meta">
+                            <h2>Absolute Beginner Guide (Everything You Need To Know)</h2>
+                        </div>
+                        <div class="entry-meta">
+                            <span class="entry-date">
+                                <i class="far fa-clock post-meta-icon"></i>
+                                <a rel="bookmark">
+                                    <time class="entry-date" datetime="2022-12-25T12:00:03-08:00">December 25, 2022</time>
+                                </a>
+                            </span>
+                            <span class="comment-link">
+                                <i class="far fa-comment-alt post-meta-icon"></i>
+                                <a>0 Comments</a>
+                            </span>
+                            <span class="byline">
+                                <span class="author vcard">
+                                    <i class="far fa-user post-meta-icon"></i>
+                                    <a class="url fn n" rel="author">Ethers</a>
+                                </span>
+                            </span>
+                            <span class="readmore">
+                                <a rel="post"> Read <i class="fas fa-long-arrow-alt-right post-meta-icon readmore"></i></a>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="view view-first">
+                    <img style='background-image: url(/assets/img/arataki-itto-feature.webp);background-size: cover;background-position: center;' />
+                    <div class="view-before">
+                        <h4 class="overflow-hidden" style="max-height:30px;">Arataki Itto Guide: Best Build, Artifacts, Weapons, Teams, and More</h4>
+                    </div>
+                    <div class="mask">
+                        <div class="top-article-meta">
+                            <div class="cat-list">
+                                <a>Characters</a>
+                                <a>Guides</a>
+                            </div>
+                            <div class="hide-sm">
+                                <span> 9 min read</span>
+                            </div>
+                        </div>
+                        <div class="bot-article-meta">
+                            <h2>Arataki Itto Guide: Best Build, Artifacts, Weapons, Teams, and More</h2>
+                        </div>
+                        <div class="entry-meta">
+                            <span class="entry-date">
+                                <i class="far fa-clock post-meta-icon"></i>
+                                <a rel="bookmark">
+                                    <time class="entry-date" datetime="2022-12-25T12:00:03-08:00">December 25, 2022</time>
+                                </a>
+                            </span>
+                            <span class="comment-link">
+                                <i class="far fa-comment-alt post-meta-icon"></i>
+                                <a>0 Comments</a>
+                            </span>
+                            <span class="byline">
+                                <span class="author vcard">
+                                    <i class="far fa-user post-meta-icon"></i>
+                                    <a class="url fn n" rel="author">Ethers</a>
+                                </span>
+                            </span>
+                            <span class="readmore">
+                                <a rel="post"> Read <i class="fas fa-long-arrow-alt-right post-meta-icon readmore"></i></a>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="view view-first">
+                    <img style='background-image: url(/assets/img/lisa-futured.jpg);background-size: cover;background-position:center;' />
+                    <div class="view-before">
+                        <h4 class="overflow-hidden" style="max-height:30px;">Lisa Guide: Best Build, Artifacts, Weapons, Teams, and More</h4>
+                    </div>
+                    <div class="mask">
+                        <div class="top-article-meta">
+                            <div class="cat-list">
+                                <a>Characters</a>
+                                <a>Guides</a>
+                            </div>
+                            <div class="hide-sm">
+                                <span> 9 min read</span>
+                            </div>
+                        </div>
+                        <div class="bot-article-meta">
+                            <h2>Lisa Guide: Best Build, Artifacts, Weapons, Teams, and More</h2>
+                        </div>
+                        <div class="entry-meta">
+                            <span class="entry-date">
+                                <i class="far fa-clock post-meta-icon"></i>
+                                <a rel="bookmark">
+                                    <time class="entry-date" datetime="2022-12-25T12:00:03-08:00">December 25, 2022</time>
+                                </a>
+                            </span>
+                            <span class="comment-link">
+                                <i class="far fa-comment-alt post-meta-icon"></i>
+                                <a>0 Comments</a>
+                            </span>
+                            <span class="byline">
+                                <span class="author vcard">
+                                    <i class="far fa-user post-meta-icon"></i>
+                                    <a class="url fn n" rel="author">Ethers</a>
+                                </span>
+                            </span>
+                            <span class="readmore">
+                                <a rel="post"> Read <i class="fas fa-long-arrow-alt-right post-meta-icon readmore"></i></a>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="guide-platform mt-4" style='background: url("/assets/img/background-home.png") center/cover no-repeat;'>
+            <img src="/assets/img/platform-logo.png" alt="logo" class="guide-platform__logo">
+            <div class="pc-guide-platform">
+                <div class="guide-platform__slogan" style='background-image: url("/assets/img/slogan.png");'></div>
+                <div class="guide-platform__go">Багатоплатформеність&nbsp;для&nbsp;вашої&nbsp;подорожі</div>
+                <div class="guide-platform__list">
+                    <a href="https://www.playstation.com/games/genshin-impact/" target="_blank" class="guide-platform__item guide-platform__item--ps4"></a>
+                    <a href="https://apps.apple.com/app/id1517783697" target="_blank" class="guide-platform__item guide-platform__item--ios"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact" target="_blank" class="guide-platform__item guide-platform__item--android"></a>
+                    <a href="https://sg-public-api.hoyoverse.com/event/download_porter/link/ys_global/genshinimpactpc/default" target="_blank" class="guide-platform__item guide-platform__item--windows"></a>
+                </div>
+            </div>
+            <div class="m-guide-platform">
+                <div class="guide-platform__slogan" style="background-image: url(/assets/img/platform-logo-mobile.png);"></div>
+                <a href="https://app.adjust.com/x9dxh30" target="_blank" class="m-guide__btn">Download Now</a>
+            </div>
+
+
+        </div>
     </div>
-    <div>
-        <h6>
-            Геншин Импакт – это захватывающая ролевая игра, которая перенесет вас в уникальный и детально проработанный мир Тэйвата. Игроки смогут исследовать великолепные локации, выполнять увлекательные квесты и сражаться с могущественными боссами вместе со своими героями. Каждый персонаж обладает уникальными способностями и историей, которые помогут вам погрузиться в игровой мир и прожить свои приключения.
-            <br><br>
-            В Геншин Импакт вы найдете множество возможностей для развития своих персонажей, крафта и сбора различных предметов. Игрокам предоставляется полная свобода действий, и каждый игрок может создать свой уникальный путь в этом увлекательном мире.
-            <br><br>
-            Красивая графика и потрясающая музыкальная составляющая погрузят вас в атмосферу игры и не оставят равнодушными. Вам предстоит исследовать разнообразные локации – от
-        </h6>
-    </div>
+
 </div>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -178,3 +385,4 @@ require($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
 <?php
 require($_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php');
 ?>
+</div>

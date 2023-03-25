@@ -23,24 +23,24 @@
         <tbody>
             <tr>
                 <td class="tier-list__td" style="background-color:rgb(255, 127, 127);">S</td>
-                <td><img src="/assets/img/rangS.png" alt=""></td>
+                <!-- <td><img src="/assets/img/rangS.png" alt=""></td> -->
             </tr>
             <tr>
                 <td class="tier-list__td" style="background-color: rgb(255, 191, 127);">A</td>
-                <td><img src="/assets/img/rangA.png" alt=""></td>
+                <!-- <td><img src="/assets/img/rangA.png" alt=""></td> -->
             </tr>
             <tr>
                 <td class="tier-list__td" style="background-color: rgb(255, 255, 127);">В</td>
-                <td><img src="/assets/img/rangB.png" alt=""></td>
+                <!-- <td><img src="/assets/img/rangB.png" alt=""></td> -->
             </tr>
             <tr>
                 <td class="tier-list__td" style="background-color: rgb(191, 255, 127);">С</td>
-                <td><img src="/assets/img/rangC.png" alt=""></td>
+                <!-- <td><img src="/assets/img/rangC.png" alt=""></td> -->
             </tr>
 
             <tr>
                 <td class="tier-list__td" style="background-color: rgb(127, 255, 127);">D</td>
-                <td><img src="/assets/img/rangD.png" alt=""></td>
+                <!-- <td><img src="/assets/img/rangD.png" alt=""></td> -->
             </tr>
         </tbody>
     </table>

@@ -49,7 +49,7 @@ if (!isset($_SESSION)) {
                     <!-- text-secondary -->
                     <li><a href="/newbie.php" class="nav-link px-2 text-white hover-yellow">Новачку</a></li>
                     <li><a href="/characters.php" class="nav-link px-2 text-white hover-yellow">Персонажі</a></li>
-                    <li><a href="/guides.php" class="nav-link px-2 text-white hover-yellow">Гайди</a></li>
+                    <li><a href="/guides.php" class="nav-link px-2 text-white hover-yellow">Гіди</a></li>
                     <li><a href="/help.php" class="nav-link px-2 text-white hover-yellow">Допомога</a></li>
                 </ul>
 

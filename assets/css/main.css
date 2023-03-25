@@ -271,20 +271,19 @@ textarea {
 }
 
 .view .mask h2 {
-  font-family: "Noticia Text", serif;
+  font-family: Raleway, serif;
   font-weight: 700;
-  font-size: 26px !important;
+  font-size: 26px;
   line-height: 40px;
   color: #fff;
   position: relative;
-  font-size: 17px;
-  font-family: Raleway, serif;
+
   padding: 10px 80px 10px 0px;
   /*background: rgba(0, 0, 0, 0.8);*/
 }
 
 .view p {
-  font-family: Merriweather, serif;
+  font-family: "Raleway", sans-serif;
   font-style: italic;
   font-size: 14px;
   position: relative;
@@ -320,8 +319,7 @@ textarea {
   opacity: 1;
 }
 
-.view-first:hover h2
- {
+.view-first:hover h2 {
   opacity: 1;
   transform: translateY(0px);
 }
@@ -368,7 +366,7 @@ textarea {
 }
 
 .entry-meta > span:not(.readmore) {
-  font-family: "Noticia Text", serif;
+  font-family: "Raleway", sans-serif;
   margin-right: 20px;
 }
 
@@ -433,17 +431,75 @@ a:hover {
   background-color: #ffc107;
   cursor: pointer;
 }
-.m-guide-platform{
+.m-guide-platform {
   display: none;
 }
-.pc-guide-platform{
+.pc-guide-platform {
   display: block;
 }
+.entry-date-pc{
+  display: block;
+}
+
+.entry-date,.comment-link{
+  display: inline-flex;
+  align-items: center;
+}
+.entry-date-m{
+  display: none;
+}
+
 @media (max-width: 1000px) {
-  .m-guide-platform{
+  .m-guide-platform {
     display: block;
   }
-  .pc-guide-platform{
+  .pc-guide-platform {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .cat-list {
+    max-width: 444px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 766px) {
+  .cat-list {
+    max-width: 333px;
+    overflow: hidden;
+  }
+  .bot-article-meta-h2{
+    overflow: hidden;
+    max-height: 140px;
+  }
+
+  .post-author,
+  .entry-date-pc{
+    display: none;
+  }
+  .entry-date-m{
+    display: inline;
+  }
+  
+ 
+ 
+}
+@media (max-width: 500px) {
+  .cat-list {
+    max-width: 222px;
+    overflow: hidden;
+  }
+  .hide-sm {
+    display: none;
+  }
+  .view .mask h2 {
+    padding-right: 20px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .comment-link a{
     display: none;
   }
 }

@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&display=swap");
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -384,12 +387,9 @@ a:active,
 a:hover {
   outline: 0;
 }
-.cat-list a:last-child {
-  margin: 0;
-}
 
-.cat-list a:not(.role-ico),
-.cat-links a {
+
+.cat-list a:not(.role-ico) {
   display: inline-block;
   font-family: "Raleway", sans-serif;
   font-size: 12px;
@@ -437,72 +437,550 @@ a:hover {
 .pc-guide-platform {
   display: block;
 }
-.entry-date-pc{
+.entry-date-pc {
   display: block;
 }
 
-.entry-date,.comment-link{
+.entry-date,
+.comment-link {
   display: inline-flex;
   align-items: center;
 }
-.entry-date-m{
+.entry-date-m {
+  display: none;
+}
+.col__news:hover {
+  cursor: pointer;
+}
+.user-settings-email {
+  word-break: break-word;
+  line-height: 1;
+}
+.user-profile {
+  margin-top: 7rem;
+  min-height: 544px;
+  font-family: "Poppins", sans-serif;
+}
+.news-text {
+  overflow: hidden;
+  height: 72px;
+  max-height: 72px;
+  text-align: justify;
+}
+.border-right {
+  border-right: 1px solid #dee2e6 !important;
+}
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #ba68c8 !important;
+}
+
+.profile-button {
+  background: rgb(99, 39, 120);
+  box-shadow: none;
+  border: none;
+}
+
+.profile-button:hover {
+  background: #682773;
+}
+
+.profile-button:focus {
+  background: #682773;
+  box-shadow: none;
+}
+
+.profile-button:active {
+  background: #682773;
+  box-shadow: none;
+}
+
+.back:hover {
+  color: #682773;
+  cursor: pointer;
+}
+.add-experience:hover {
+  background: #ba68c8;
+  color: #fff;
+  cursor: pointer;
+  border: solid 1px #ba68c8;
+}
+.ti-heart_custom,.ti-saved_custom {
+  margin-top: 34%;
+  display: inline-block;
+}
+.ti-heart_custom {
+  background-image: url(/assets/img/icon/heart.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 27px;
+  width: 20px;
+}
+.ti-heart_custom:hover {
+  cursor: pointer;
+  background-image: url(/assets/img/icon/heart_hover.svg);
+}
+
+
+.ti-saved_custom {
+  background-image: url(/assets/img/icon/bookmark-outline.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 27px;
+  width: 20px;
+}
+.ti-saved_custom:hover {
+  cursor: pointer;
+  background-image: url(/assets/img/icon/bookmark_hover.svg);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 50px;
+  width: 100%;
+  height: 50px;
+  vertical-align: top;
+}
+
+.topbar__breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.topbar__node {
+  color: #808080;
+  text-decoration: none;
+}
+
+.topbar__arraw {
+  width: 24px;
+  color: #aaa;
+  text-align: center;
+}
+
+.topbar__back {
+  color: #ccc;
+  text-decoration: none;
+  text-align: right;
+  font-size: 16px;
+}
+.news-preview-image {
+  width: 80%;
+}
+.latest__title {
+  width: 100%;
+  height: 34px;
+  background: rgba(18, 18, 18, 0.04);
+  color: #333;
+  line-height: 34px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.latest__item:first-child {
+  margin-top: 4px;
+}
+
+.latest__item {
+  display: flex;
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.latest__item img {
+  flex-shrink: 0;
+  width: 140px;
+  height: 70px;
+}
+
+.coverFit {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.latest__info {
+  width: 100%;
+  margin-left: 10px;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.latest__info p:first-child {
+  min-height: 40px;
+  color: #393b40;
+  font-size: 14px;
+}
+
+.latest__info p {
+  line-height: 16px;
+  max-height: 49px;
+  overflow: hidden;
+}
+
+.latest__date {
+  font-size: 14px;
+  color: #999;
+  margin-top: 5px;
+}
+
+.latest__item:hover {
+  background: #e3e3e5;
+}
+
+.article__title {
+  line-height: 40px;
+  font-size: 32px;
+  color: #333;
+  text-align: justify;
+}
+
+.article__date {
+  margin-top: 13px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #999;
+}
+.article__text {
+  font-size: 16px;
+  text-align: justify;
+  line-height: 22px;
+}
+a {
+  text-decoration: none;
+}
+.news-buttons-nav {
+  color: white;
+}
+.news-buttons-nav:hover {
+  color: white;
+}
+.lh-55 {
+  line-height: 55px;
+}
+.headerSort {
+  padding: 10px;
+}
+.table-responsive {
+  overflow-x: auto;
+}
+.heroes-info-table {
+  width: 100%;
+  height: 100%;
+  background-color: #faf3e7;
+}
+.table__GI {
+  width: 100%;
+}
+.table__GI thead {
+  background: #d3ba91;
+}
+.table__GI td {
+  border-bottom: 1px solid #cecece;
+  padding: 0 10px;
+}
+
+.table__GI td a {
+  color: #667cb4;
+}
+.table__GI th:nth-child(1) {
+  width: 40px;
+}
+.table__GI tbody {
+  background-color: #faf3e7;
+}
+.table-code td,
+.table-code th {
+  border: 1px solid #cecece;
+  padding: 0.5em;
+}
+.li-p-5 {
+  padding: 5px;
+}
+.code-p {
+  text-indent: 2em;
+  line-height: 28px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.forum-tema {
+  font-family: Inter;
+  border: 1px solid #9b9b9b;
+  height: 130px;
+  width: 100%;
+}
+
+.forum-figure {
+  height: 100%;
+  min-width: 30px;
+  width: 68px;
+
+  position: relative;
+}
+
+.forum-figure div {
+  background-color: white;
+  position: relative;
+  top: 12px;
+  left: 90%;
+  height: 104px;
+  width: 8px;
+  padding: 12px 0px;
+}
+
+.forum-text {
+  width: 100%;
+}
+
+.h-40 {
+  height: 40px;
+}
+
+.forum-tema h5 {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  word-break: break-all;
+}
+
+.forum-tema p {
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+}
+
+.forum-tema span {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 15px;
+  color: #000000;
+}
+
+.forum-tema button {
+  min-width: 148px;
+  height: 33px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.forum-title-obg {
+  overflow: hidden;
+  max-height: 40px;
+  max-width: 100%;
+}
+
+.forum-create-obg {
+  min-width: 250px;
+}
+
+.forum-last-update-mb span {
   display: none;
 }
 
-@media (max-width: 1000px) {
-  .m-guide-platform {
-    display: block;
-  }
-  .pc-guide-platform {
-    display: none;
-  }
+.forum-dropdown-mb {
+  display: none;
+}
+.obg-tema {
+  font-family: Inter;
+  height: 130px;
+  width: 100%;
 }
 
-@media (max-width: 991px) {
-  .cat-list {
-    max-width: 444px;
-    overflow: hidden;
-  }
+.comment-user {
+  font-family: Inter;
+  width: 100%;
 }
 
-@media (max-width: 766px) {
-  .cat-list {
-    max-width: 333px;
-    overflow: hidden;
-  }
-  .bot-article-meta-h2{
-    overflow: hidden;
-    max-height: 140px;
-  }
+.forum-text {
+  width: 100%;
+}
 
-  .post-author,
-  .entry-date-pc{
-    display: none;
-  }
-  .entry-date-m{
-    display: inline;
-  }
-  
- 
- 
+.h-40 {
+  height: 40px;
 }
-@media (max-width: 500px) {
-  .cat-list {
-    max-width: 222px;
-    overflow: hidden;
-  }
-  .hide-sm {
-    display: none;
-  }
-  .view .mask h2 {
-    padding-right: 20px;
-    font-size: 20px;
-    line-height: 26px;
-  }
-  .comment-link a{
-    display: none;
-  }
+
+.obg-tema h5 {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
 }
+
+.obg-tema p,
+.comment-user p {
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+}
+
+.obg-tema span,
+.comment-user span {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 15px;
+  color: #000000;
+}
+
+.obg-tema button {
+  min-width: 148px;
+  height: 33px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.obg-tema-title {
+  overflow: hidden;
+  max-height: 40px;
+  max-width: 100%;
+}
+
+.forum-create-obg {
+  min-width: 250px;
+}
+
+.btn-add-comment {
+  margin-top: 10px;
+  border: 1px solid #cdcdcd;
+  padding: 20px;
+}
+
+.btn-add-comment > div:first-child {
+  flex-grow: 1;
+}
+
+.btn-add-comment textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+#user_name {
+  overflow: hidden;
+  max-width: 200px;
+  max-height: 28px;
+  word-break: break-all;
+}
+#usernameSettings{
+  word-break: break-all;
+}
+.obg-tema button {
+  cursor: auto;
+}
+.topbar__title{
+  max-height: 24px;
+  max-width: 651px;
+  overflow: hidden;
+}
+.post__cat-list a:hover,.cat-list a:hover{
+  color: white !important;
+}
+.byline{
+  max-width: 220px;
+  overflow: hidden;
+  max-height: 17px;
+}
+#postCurrent {
+  color: white;
+  display: flex;
+  align-items: baseline;
+  text-transform: uppercase;
+  justify-content: space-around;
+}
+
+.postCurrent__info {
+  display: flex;
+  max-height: 20px;
+}
+
+.postCurrent__author {
+  word-break: break-all;
+  color: white;
+}
+
+.postCurrent_author-div {
+  max-width: 250px;
+  overflow: hidden;
+}
+
+.ti-saved_custom {
+  margin-top: 20%;
+  height: 16px;
+}
+
+.post-meta-icon {
+  font-size: 13px;
+  margin: auto;
+  padding: auto;
+  top: auto;
+  position: relative;
+}
+.entry-date-pc,.entry-date-m{
+  color: white;
+}
+.postCurrent__author:hover{
+  color: white!important;
+}
+/* .pageination .page-link {
+  border: 0px solid transparent;
+  font-weight: 500;
+  font-size: 18px;
+  color: #979797;
+  padding: 10px 8px;
+}
+
+.pageination .page-link:hover {
+  background-color: transparent;
+  color: #000;
+}
+
+.pageination i {
+  font-size: 12px;
+}
+.page-item.active .page-link{
+  color: white;
+} */
+/* .col__news:hover .card-body {
+  background-color: rgba(108, 117, 125);
+  transition: 1s;
+
+}
+.col__news:hover .card-text {
+  color: white ;
+}
+.col__news:hover .btn-outline-secondary{
+  color: white;
+  border-color: white;
+}
+.col__news:hover .text-body-secondary{
+  color: white!important;
+} */
+.btn-outline-secondary-like:hover {
+  background-color: #da1d1d;
+  transition: 0.8s;
+}
+.btn-outline-secondary-save:hover {
+  background-color: #ffc107;
+  color: #212529 !important;
+  border-color: #212529;
+  transition: 0.8s;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

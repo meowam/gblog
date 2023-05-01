@@ -1,0 +1,50 @@
+.labels {
+    font-size: 11px;
+    margin-bottom: 0.5rem;
+}
+
+.menu_contact-info{
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+.user-profile {
+    margin-top: 7rem !important;
+}
+
+.col-mt {
+    margin-top: 1rem !important;
+}
+
+.border_contact-info {
+    border-bottom: 1px solid #dee2e6 !important;
+}
+
+.vis-n {
+    display: none;
+}
+
+.user_href-catalog {
+    font-size: 20px;
+}
+
+.table td,
+.table th {
+    border: 1px solid #dee2e6;
+    text-align: center;
+    /* выравнивание содержимого по центру горизонтально */
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .user-profile {
+        margin-top: 2rem !important;
+    }
+
+    .contact-info {
+        border-top: 1px solid #dee2e6 !important;
+    }
+}
+h4 {
+    margin-bottom: 1rem;
+}

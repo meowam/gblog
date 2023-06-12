@@ -21,7 +21,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
         <i> Зверніть увагу, що для використання деяких кодів вам необхідно мати мінімальний ранг пригод 10!</i>
     </p>
     <div class="elementor-widget-container mb-3 m-t-40">
-        <h2 class="elementor-heading-title elementor-size-default">Актуальні Коди Genshin Impact на квітень 2023 року</h2>
+        <h2 class="elementor-heading-title elementor-size-default">Актуальні Коди Genshin Impact на червень 2023 року</h2>
     </div>
     <div class="container">
 
@@ -39,12 +39,12 @@ require($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
                 <tr>
                     <td><strong>GA9FPD42SJ4V</strong></td>
                     <td>60 Каменів витоку</td>
-                    <td>12 квітня 2023</td>
+                    <td>12 травня 2023</td>
                 </tr>
                 <tr>
                     <td><strong>9ARE6VLJT34H</strong></td>
                     <td></td>
-                    <td>31 березня 2023</td>
+                    <td>30 квітня 2023</td>
                 </tr>
                 <tr>
                     <td><strong>KBRE7D4KA2MM</strong></td>

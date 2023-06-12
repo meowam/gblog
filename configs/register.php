@@ -1,12 +1,10 @@
 <?php
 require($_SERVER['DOCUMENT_ROOT'] . '/configs/db.php');
 if (!empty($_POST)) {
-    // Проверяем, есть ли пользователь с таким же email
     $email = mysqli_real_escape_string($conn, $_POST['emailRegister']);
     $query = "SELECT * FROM `users` WHERE `email` = '$email'";
     $result = mysqli_query($conn, $query);
     if (mysqli_num_rows($result) > 0) {
-        // Пользователь с таким email уже существует, возвращаем ошибку
         $response = array('error' => 'Користувач з даним email вже існує');
         echo json_encode($response);
         exit();

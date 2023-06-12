@@ -36,7 +36,6 @@
 }
 
 @media (max-width: 766px) {
- 
   .bot-article-meta-h2 {
     overflow: hidden;
     max-height: 140px;
@@ -90,7 +89,6 @@
   }
 }
 @media (max-width: 500px) {
-
   .hide-sm {
     display: none;
   }
@@ -152,12 +150,12 @@
     width: 100%;
     margin-top: 20px;
   }
-  .byline{
+  .byline {
     max-height: 15px;
   }
   .postCurrent_author-div {
     max-width: 147px;
-}
+  }
 }
 
 @media (max-width: 480px) {
@@ -212,9 +210,12 @@
   .btn-send_comment {
     margin: 0px;
   }
-  .postCurrent__comment{
+  .postCurrent__comment {
     display: none;
-}
+  }
+  .btn-send_comment2{
+    margin-left: 0px!important;
+  }
 }
 @media (max-width: 410px) {
   .forum-dropdown-mb {
@@ -231,13 +232,11 @@
   .btn-info-obg {
     display: none;
   }
-  .saved_post{
+  .saved_post {
     display: none;
   }
- 
 }
 @media (max-width: 350px) {
-
   .forum-title-obg {
     width: calc(100% - 20px);
   }

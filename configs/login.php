@@ -9,7 +9,7 @@ if (!empty($_POST)) {
     $user = $result->fetch_assoc();
     if ($user) {
         $_SESSION["user_id"] = $user['id'];
-        if (isset($_POST['remember-me'])) { // куки 
+        if (isset($_POST['remember-me'])) { 
             setcookie(
                 'user_id',
                 $user['id'],
@@ -18,20 +18,17 @@ if (!empty($_POST)) {
             );
         }  
         echo json_encode(array('success' => true));
-        // header("Location: /index.php"); // редирект
       
     } else {
 
-        $_SESSION["user_id"] = null; // очистить данные выйти из сесии
+        $_SESSION["user_id"] = null; 
         setcookie(
-            'user_id',  // пользователб
-            '', // конкретный пользователь
-            0, // время куки на 0
-            '/' // сохраняем на всех страницах домена
+            'user_id',  
+            '', 
+            0, 
+            '/' 
         );  
         echo json_encode(array('success' => false));       
-        // header("Location: /index.php"); // редирект
-      
     }
 
 }

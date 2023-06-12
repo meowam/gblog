@@ -10,7 +10,6 @@ const onDrop = (event) => {
   const draggedCardId = event.dataTransfer.getData('id');
   const draggedCard = document.getElementById(draggedCardId);
   event.target.appendChild(draggedCard);
-  // console.log('dropped the element');
 }
 
 rows.forEach((rows, index) => {

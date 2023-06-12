@@ -7,17 +7,26 @@ $response = array();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($user)) {
-
         $title = $_POST['title'];
         $text = $_POST['editor'];
         $categories = $_POST['categories'];
         $image = $_FILES['image']['name'];
 
+        if (empty($title) || empty($text) || empty($categories)) {
+            $response = array(
+                'status' => 'error',
+                'message' => 'Будь ласка, заповніть всі дані форми.'
+            );
+            header('Content-Type: application/json');
+            echo json_encode($response);
+            exit;
+        }
+
         $user_id = $user['id'];
+
         if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
-            // Загружаем файл картинки
             $image = $_FILES['image']['name'];
-            move_uploaded_file($_FILES['image']['tmp_name'], $_SERVER['DOCUMENT_ROOT'] .'/assets/img/posts/'. $image);
+            move_uploaded_file($_FILES['image']['tmp_name'], $_SERVER['DOCUMENT_ROOT'] . '/assets/img/posts/' . $image);
         } else {
             $image = "default.jpg";
         }
@@ -34,15 +43,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $sql = "SELECT * from categories where `name_category` = '$category'";
             $result = mysqli_query($conn, $sql);
 
-            while ($row = mysqli_fetch_assoc($result)){
+            while ($row = mysqli_fetch_assoc($result)) {
                 $id = $row['id_category'];
-                $sql2 = "INSERT INTO posts_categories (post_id, category_id) VALUES ('$post_id', '$id')";   
+                $sql2 = "INSERT INTO posts_categories (post_id, category_id) VALUES ('$post_id', '$id')";
             }
             mysqli_query($conn, $sql2);
         }
+
+        $response = array(
+            'status' => 'success',
+            'message' => 'Пост успішно додано!'
+        );
     } else {
-        echo 'no login';
+        $response = array(
+            'status' => 'error',
+            'message' => 'Щоб додати пост, будь ласка, авторизуйтесь!'
+        );
     }
 } else {
-    echo 'error';
+    $response = array(
+        'status' => 'error',
+        'message' => 'Невірний метод запиту.'
+    );
 }
+
+header('Content-Type: application/json');
+echo json_encode($response);
+exit;

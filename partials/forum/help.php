@@ -111,7 +111,7 @@ $offset = ($curr_p - 1) * $rowsperpage;
                         </div>
                     </a>
                 <?php endwhile;
-            }    // выполнить действие для параметра order=new
+            }   
             elseif ($order === 'comment') {
                 $discussionsList1 = getAllDiscussionsByLastComment($offset, $rowsperpage);
                 while ($row = mysqli_fetch_assoc($discussionsList1)) :
@@ -156,41 +156,9 @@ $offset = ($curr_p - 1) * $rowsperpage;
                     </a>
             <?php endwhile;
             } else {
-                // обработать недопустимое значение параметра order
+                
             } ?>
         </div>
-        <!-- <div class="m-b-30 d-flex forum-tema">
-            <div class="forum-figure">
-                <div></div>
-            </div>
-            <div class="forum-text m-l-23 m-r-20">
-                <h5 class="p-t-18 m-b-30 forum-title-obg">
-                    <b>How do how deep how you
-                        are How do how deee How do how deep how you are How do how deepe How do how deep how you are
-                        f How do how deepe How do how deep how you are f How do how deepp how you are f How do how d
-                        fffffff eep
-                    </b>
-                </h5>
-                <div class="d-flex justify-content-between forum-info-obg">
-                    <div class="d-flex h-40">
-                        <div class="d-flex"><img src="/assets/img/avatar/default.jpg" width="40" height="100%" alt="">
-                            <div class="m-l-12 m-r-40" style="min-width: 140px;">
-                                <p>Anastasia</p>
-                                <span>сьогодні о 22:24</span>
-                            </div>
-                        </div>
-                        <div style="min-width: 160px;" class="forum-last-update-pc">
-                            <p>&nbsp; </p>
-                            <span>остання відповідь о 23:51</span>
-                        </div>
-                    </div>
-                    <div class="m-t-4 forum-last-update-mb"> <span>остання відповідь о 23:51</span>
-                        <button>Зауваження</button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
         <div id="pagination_discussions">
             <?php
             require($_SERVER['DOCUMENT_ROOT'] . '/configs/pagination.php'); ?>

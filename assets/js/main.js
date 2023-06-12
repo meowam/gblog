@@ -1,4 +1,3 @@
-
 (function ($) {
     "use strict";
 
@@ -51,8 +50,6 @@
 
         $(thisAlert).removeClass('alert-validate');
     }
-
-
 
 })(jQuery);
 
@@ -205,11 +202,6 @@
     }
 })()
 
-// document.querySelector('.col').addEventListener('click', function() {
-//     window.location.href = this.getAttribute('data-href');
-// });
-// 
-
 function setFigureBackgroundColors() {
     const colors = ['#839CC2', '#E0BFBF', '#CABFE0', '#BFE0C0', '#E7DAAD'];
     const figureList = document.querySelectorAll('.forum-figure');
@@ -283,6 +275,7 @@ $(document).ready(function () {
         $("#form-settings").addClass('vis-n');
         $("#form-saved").removeClass('vis-n');
     });
+
     $("#user-profile-favorites").click(function () {
         $("#form-saved").addClass('vis-n');
         $("#form-settings").addClass('vis-n');
@@ -325,7 +318,6 @@ $(document).ready(function () {
                         $('#avatar-header').attr('src', '/assets/img/avatar/' + response.imageName);
 
                     }
-
                 } else {
                     if (!response.changePassword) {
                         alert('Паролі не збігаються!');
@@ -342,9 +334,7 @@ $(document).ready(function () {
         });
     });
 
-
     $(".btn-group_liked").click(function () {
-        // Отримання id продукту
         var news_id = $(this).data("newsid");
         var user_auth = $(this).data("userauth");
         if (!user_auth) {
@@ -369,14 +359,17 @@ $(document).ready(function () {
             });
         }
     });
+
     $(".create-tierlist").click(function (event) {
         event.preventDefault();
         window.location.href = "/partials/header_pages/tier-list.php";
     });
+
     $(".create-post").click(function (event) {
         event.preventDefault();
         window.location.href = "/partials/posts/add-post.php";
     });
+
     var counter = 2;
 
     $("#add-category").click(function (event) {
@@ -407,6 +400,7 @@ $(document).ready(function () {
             }
         });
     });
+
     $("#delete-category").click(function (event) {
         event.preventDefault();
         var categories = $("#categories > .mb-3");
@@ -422,8 +416,6 @@ $(document).ready(function () {
             alert("Неможливо видалити всі категорії!");
         }
     });
-
-   
 
     $('#formCommentDisscution').on('submit', function (e) {
         e.preventDefault();
@@ -445,11 +437,8 @@ $(document).ready(function () {
                     count++;
                     countElem.text('(' + count + ')');
                 }
-
             },
-
         })
-
     });
 
     $("#search_discussions").keyup(function () {
@@ -483,10 +472,11 @@ $(document).ready(function () {
 
     });
 
-    $(".btn-group_saved").click(function () {
-        // Отримання id продукту
+    $(".btn-group_saved").click(function() {
         var post_id = $(this).data("postid");
         var user_auth = $(this).data("userauth");
+        var savedPostElement = $(".saved_post[data-postid='" + post_id + "']");
+    
         if (!user_auth) {
             alert("Увійдіть в акаунт!");
         } else {
@@ -494,23 +484,21 @@ $(document).ready(function () {
                 url: "/scripts/handler_saved.php",
                 type: "POST",
                 data: { post_id: post_id },
-                success: function (response) {
+                success: function(response) {
                     response = JSON.parse(response);
                     if (response.status == "liked") {
                         $(".btn-group_saved[data-postid='" + post_id + "'] i").css("background-image", "url('/assets/img/icon/bookmark_saved.svg')");
-                        $(".saved_post").text("Збережено");
+                        savedPostElement.text("Збережено");
                     } else {
                         $(".btn-group_saved[data-postid='" + post_id + "'] i").css("background-image", "url('/assets/img/icon/bookmark-outline.svg')");
-                        $(".saved_post").text("Зберегти");
+                        savedPostElement.text("Зберегти");
                     }
                 },
-
-                error: function () {
+                error: function() {
                 }
             });
         }
-    });
-
+    });    
 
     $('#formCommentPost').on('submit', function (e) {
         e.preventDefault();
@@ -538,52 +526,31 @@ $(document).ready(function () {
         })
     });
 
-    // $('#AddPost').submit(function(event) {
-    //     event.preventDefault();
-    //     alert(editor.getData());
-    //     // var editorData = CKEDITOR.instances.editor.getData();
-    //     // alert(1);
-    //     var formData = new FormData(this);
-    //     formData.append('editorData', editorData);
-    //     alert(formData);
-        // $.ajax({
-        //     url: '/scripts/handler_posts.php',
-        //     type: 'POST',
-        //     data: formData,
-        //     processData: false,
-        //     contentType: false,
-        //     success: function(response) {
-        //         console.log(response);
-        //     },
-        //     error: function(xhr, status, error) {
-        //         console.log(xhr.responseText);
-        //     }
-        // });
-    // });
+    $('#form_discussions').submit(function(e) {
+        e.preventDefault(); 
 
+        var form = $(this);
+        var url = form.attr('action');
+
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: form.serialize(),
+            dataType: 'json',
+            success: function(response) {
+                if (response.status === 'success') {
+                    alert(response.message);
+                    window.location.href = '/partials/forum/help.php';
+                } else {
+                    alert(response.message);
+                }
+            },
+            error: function() {
+                alert('Сталася помилка при виконанні запиту.');
+            }
+        });
+    });
 });
 
-
-
-
-// $('#form_discussions').on('submit', function (e) {
-//     e.preventDefault();
-//     let form_data = new FormData($('#form_discussions')[0]);
-//     $.ajax({
-//         url: "/scripts/add_Disscusion.php",
-//         type: "POST",
-//         data: form_data,
-//         processData: false,
-//         contentType: false,
-//         success: function (data) {
-//             if (data == "error") {
-//                 alert("Щоб додати обговорення, увійдіть будь ласка, в акаунт");
-//             } else {
-//                 $('#list_discussions').prepend(data);
-//                 $('#form_discussions')[0].reset();
-//             }
-//         },
-//     })
-// });
 
 

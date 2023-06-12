@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&display=swap");
 
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
 
 html {
   color: #222;
@@ -11,15 +8,6 @@ html {
   line-height: 1.4;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -31,10 +19,6 @@ html {
   text-shadow: none;
 }
 
-/*
- * A better looking default horizontal rule
- */
-
 hr {
   display: block;
   height: 1px;
@@ -44,11 +28,6 @@ hr {
   padding: 0;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
 
 audio,
 canvas,
@@ -59,9 +38,6 @@ video {
   vertical-align: middle;
 }
 
-/*
- * Remove default fieldset styles.
- */
 
 fieldset {
   border: 0;
@@ -69,9 +45,6 @@ fieldset {
   padding: 0;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
 
 textarea {
   resize: vertical;
@@ -93,8 +66,6 @@ textarea {
   color: #ffc107 !important;
 }
 
-/* #212529
-#ffc107 */
 .nav-link-active,
 .nav-link-active:hover {
   color: rgba(246, 210, 101, 0.381) !important;
@@ -105,25 +76,6 @@ textarea {
   height: 24px;
   display: block;
 }
-/* .tier-list-ul {
-  list-style-image: url("/assets/img/mark.png");
-} */
-/* .tier-list-ul li {
-  list-style: none;
-
-}
-.tier-list-ul li::before {
-  display: flex;
-  content: url(/assets/img/mark.png);
-  width: 5px;
-  height: 5px;
-  display: inline-block;
-  vertical-align: middle;
-  background-color: pink;
-  border-radius: 100%;
-  margin-right: 10px;
-  margin-left: -15px;
-} */
 .tier-list__td {
   text-align: center;
   vertical-align: middle;
@@ -280,9 +232,7 @@ textarea {
   line-height: 40px;
   color: #fff;
   position: relative;
-
   padding: 10px 80px 10px 0px;
-  /*background: rgba(0, 0, 0, 0.8);*/
 }
 
 .view p {
@@ -936,40 +886,7 @@ a {
 .postCurrent__author:hover{
   color: white!important;
 }
-/* .pageination .page-link {
-  border: 0px solid transparent;
-  font-weight: 500;
-  font-size: 18px;
-  color: #979797;
-  padding: 10px 8px;
-}
 
-.pageination .page-link:hover {
-  background-color: transparent;
-  color: #000;
-}
-
-.pageination i {
-  font-size: 12px;
-}
-.page-item.active .page-link{
-  color: white;
-} */
-/* .col__news:hover .card-body {
-  background-color: rgba(108, 117, 125);
-  transition: 1s;
-
-}
-.col__news:hover .card-text {
-  color: white ;
-}
-.col__news:hover .btn-outline-secondary{
-  color: white;
-  border-color: white;
-}
-.col__news:hover .text-body-secondary{
-  color: white!important;
-} */
 .btn-outline-secondary-like:hover {
   background-color: #da1d1d;
   transition: 0.8s;

@@ -3,7 +3,6 @@ $newsInfo =  getNewsByCategoryLimit(3, $offset, $rowsperpage);
 while ($row = mysqli_fetch_assoc($newsInfo)) :
 ?>
 
-    <!-- data-href="/news ?>" -->
     <div class="col">
         <div class="card shadow-sm">
             <a class="text-decoration-none col__news" href="/partials/news/news_detail.php?id=<?php echo $row['id']; ?>">

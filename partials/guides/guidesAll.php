@@ -56,9 +56,9 @@ while ($row = mysqli_fetch_assoc($postList)) :
                                                                                                                 ?>>
                                 <i class="ti-saved_custom" <?php if ($liked == true) : ?>style="background-image: url('/assets/img/icon/bookmark_saved.svg')" <?php endif; ?>></i>&nbsp;
                                 <?php if ($liked == true) { ?>
-                                    <b><span class="saved_post"> Збережено</span></b>
+                                    <b><span class="saved_post" data-postid="<?php echo $row['id_post'] ?>"> Збережено</span></b>
                                 <?php } else {
-                                    echo '<b><span class="saved_post"> Зберегти</span></b>';
+                                    echo '<b><span class="saved_post" data-postid="'. $row['id_post']. '"> Зберегти</span></b>';
                                 } ?>
                             </div>
                         </div>

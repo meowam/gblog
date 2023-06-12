@@ -2,6 +2,12 @@
 require($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
 $range = 6;
 $rowsperpage = 4;
+if (isAuth()) {
+    $user = getNameUser($user['id']);
+} else {
+    $user = null;
+    $liked = false;
+}
 
 if (!isset($_GET['p'])) {
     $sql = 'SELECT COUNT(*) FROM posts';
@@ -62,8 +68,12 @@ $offset = ($curr_p - 1) * $rowsperpage;
 
     <div class="container">
         <div class="row align-items-md-stretch">
-            <button class="btn btn-outline-primary m-b-20 create-post" style="font-size: 18px;"><span>+</span> Додати пост</button>
             <?php
+            if ($user != null) {
+            ?>
+                <button class="btn btn-outline-primary m-b-20 create-post" style="font-size: 18px;"><span>+</span> Додати пост</button>
+            <?php
+            }
             if (!isset($_GET['p'])) {
                 require($_SERVER['DOCUMENT_ROOT'] . '/partials/guides/guidesAll.php');
             } else if (isset($_GET['p'])) {

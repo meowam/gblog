@@ -28,12 +28,6 @@
                                     Запам'ятати мене
                                 </label>
                             </div>
-                            <!-- <div>
-                                    <a href="#" class="txt1"> @todo 
-                                        
-                                        Забубили пароль?
-                                    </a>
-                                </div> -->
                         </div>
                         <div class="container-login100-form-btn m-t-17">
                             <button class="login100-form-btn" type="submit" value="submit">

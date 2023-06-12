@@ -4,9 +4,6 @@ require($_SERVER['DOCUMENT_ROOT'] . '/configs/function.php');
 $imageName = '';
 $user = getCurrentUser();
 $username = $_POST['username'];
-// $password_old = $_POST['password_old'];
-// $password_new = $_POST['password_new'];
-
 $password = md5($_POST['password_old']);
 $password_new = md5($_POST['password_new']);
 

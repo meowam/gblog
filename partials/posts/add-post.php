@@ -5,12 +5,10 @@ $maxCategories = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM categories")
 <script src="https://cdn.ckeditor.com/ckeditor5/37.1.0/super-build/ckeditor.js"></script>
 <style>
     .ck-editor__editable[role="textbox"] {
-        /* editing area */
         min-height: 200px;
     }
 
     .ck-content .image {
-        /* block images */
         max-width: 80%;
         margin: 20px auto;
     }
@@ -53,7 +51,7 @@ $maxCategories = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM categories")
             <label class="form-label">Картинка посту</label>
             <input type="file" class="form-control" name="image">
         </div>
-        <button type="submit" value="submit" class="btn btn-outline-primary">Зберегти</button>
+        <button type="submit" value="submit" class="btn btn-outline-primary">Створити</button>
     </form>
 </div>
 
@@ -69,9 +67,9 @@ $maxCategories = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM categories")
                     'outdent', 'indent', '|',
 
                     'alignment', '|',
-                    'link', 
+                    'link',
                     // 'insertImage',
-                     'blockQuote',
+                    'blockQuote',
                     // 'insertTable', 
                     'horizontalLine', '|',
                     // 'sourceEditing', 
@@ -184,6 +182,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php');
 <script>
     $('#AddPost').submit(function(event) {
         event.preventDefault();
+
         var data = myClassicEditor.getData();
         var formData = new FormData(this);
         formData.append('editor', data);
@@ -194,8 +193,12 @@ require($_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php');
             processData: false,
             contentType: false,
             success: function(response) {
-                alert("Пост успішно додано!");
-                window.location.href = '/partials/guides/guides.php';
+                if (response.status === 'success') {
+                    alert(response.message);
+                    window.location.href = '/partials/guides/guides.php';
+                } else {
+                    alert(response.message);
+                }
             },
             error: function(xhr, status, error) {
                 console.log(xhr.responseText);

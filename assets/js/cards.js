@@ -24,27 +24,6 @@ const createCard = () => {
   return card;
 }
 
-const appendImage = (card) => {
-  const input = document.createElement('input');
-  input.setAttribute('type', 'file');
-  input.setAttribute('accept', 'image/x-png,image/gif,image/jpeg,image/webp');
-  input.style.visibility = 'hidden';
-  input.onchange = () => {
-    const image = new Image(100, 95);
-    const file = input.files[0];
-    // console.log(file);
-    
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      image.src = event.target.result;
-      image.style.pointerEvents = 'none';
-      card.appendChild(image);
-    }
-    reader.readAsDataURL(file);
-  }
-  input.click();
-}
-
 const deleteCard = (event) => {
   const willDeleteCard = window.confirm('Ви хочете видалити даного персонажа з тірліста?');
   if (willDeleteCard) {
@@ -62,7 +41,6 @@ const onDragStart = (event) => {
 
 const onDragEnd = (event) => {
   event.target.style.visibility = 'visible';
-  // console.log('ended the drag');
 }
 
 cards.forEach((card, index) => {

@@ -324,7 +324,7 @@ function getPostByUser($id)
 function getReadMinutes($text)
 {
     $char_count = strlen($text); 
-    $char_count_in_thousands = round($char_count / 1000);
+    $char_count_in_thousands = round($char_count / 2000);
 
     return $char_count_in_thousands;
 }

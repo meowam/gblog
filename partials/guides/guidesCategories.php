@@ -6,7 +6,7 @@ while ($row = mysqli_fetch_assoc($categoryPost)) :
         <div class="view view-first">
             <img style="background-image: url(/assets/img/posts/<?= $row['post_image']; ?>);background-size: cover;background-position-x:center;">
             <div class="view-before">
-                <h4 class="overflow-hidden" style="max-height:28px;word-b"><?= $row['title']; ?></h4>
+                <h4 class="overflow-hidden" style="max-height:28px;"><?= $row['title']; ?></h4>
             </div>
             <div class="mask">
                 <div class="top-article-meta">
@@ -54,9 +54,9 @@ while ($row = mysqli_fetch_assoc($categoryPost)) :
                                                                                                                 ?>>
                                 <i class="ti-saved_custom" <?php if ($liked == true) : ?>style="background-image: url('/assets/img/icon/bookmark_saved.svg')" <?php endif; ?>></i>&nbsp;
                                 <?php if ($liked == true) { ?>
-                                    <b><span class="saved_post"> Збережено</span></b>
+                                    <b><span class="saved_post" data-postid="<?php echo $row['id_post'] ?>"> Збережено</span></b>
                                 <?php } else {
-                                    echo '<b><span class="saved_post"> Зберегти</span></b>';
+                                    echo '<b><span class="saved_post" data-postid="'. $row['id_post']. '"> Зберегти</span></b>';
                                 } ?>
                             </div>
                         </div>
@@ -67,5 +67,4 @@ while ($row = mysqli_fetch_assoc($categoryPost)) :
     </div>
 <?php
 endwhile;
-// endwhile;
 ?>

@@ -23,7 +23,6 @@ if (!isset($_SESSION)) {
     <link rel="stylesheet" type="text/css" href="/assets/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/util.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/mains.css">
-    <!-- <link rel="stylesheet" href="/assets/css/bootstrap.min.css">  -->
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/adaptive.css">
@@ -47,7 +46,6 @@ if (!isset($_SESSION)) {
                 <a href="/index.php" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                     <img class="logo" src="/assets/img/logo_white.svg" height="32" alt="logo">
                 </a>
-                <!-- text-secondary -->
                 <?php
                 function comparisonPages($page)
                 {

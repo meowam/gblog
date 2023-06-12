@@ -1,7 +1,6 @@
 <?php
 require($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
 ?>
-<!-- <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css" /> -->
 <style>
     td {
         height: auto;

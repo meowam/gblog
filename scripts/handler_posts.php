@@ -7,8 +7,8 @@ $response = array();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($user)) {
-        $title = $_POST['title'];
-        $text = $_POST['editor'];
+        $title = mysqli_real_escape_string($conn, $_POST['title']);
+        $text = mysqli_real_escape_string($conn, $_POST['editor']);
         $categories = $_POST['categories'];
         $image = $_FILES['image']['name'];
 

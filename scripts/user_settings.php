@@ -3,7 +3,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/configs/db.php');
 require($_SERVER['DOCUMENT_ROOT'] . '/configs/function.php');
 $imageName = '';
 $user = getCurrentUser();
-$username = $_POST['username'];
+$username = mysqli_real_escape_string($conn, $_POST['username']);
 $password = md5($_POST['password_old']);
 $password_new = md5($_POST['password_new']);
 

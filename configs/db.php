@@ -5,7 +5,7 @@ if (!isset($_SESSION)) {
 date_default_timezone_set('Europe/Kiev');
 $server = "localhost";
 $username = "root";
-$password = "";
+$password = "root";
 $dbname = "genshin_blog";
 
 $conn = mysqli_connect($server, $username, $password, $dbname);

@@ -3,8 +3,9 @@ require($_SERVER['DOCUMENT_ROOT'] . '/configs/function.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user = getCurrentUser();
-    $text_comment = $_POST['text_comment'];
-    $id_disscusion = $_POST['id_disscusion'];
+    $text_comment = mysqli_real_escape_string($conn, $_POST['text_comment']);
+    $id_disscusion = mysqli_real_escape_string($conn, $_POST['id_disscusion']);
+
     $currentDate = time();
 
     if (!$conn) {

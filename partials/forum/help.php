@@ -1,10 +1,13 @@
 <?php
+if (isset($_GET['order'])) {
+    $order = $_GET['order'];
+}else{
+    header("Location: /partials/forum/help.php?order=new");
+}
 if (($_GET['order']) != 'new' && ($_GET['order']) != 'comment') {
     header("Location: /partials/forum/help.php?order=new");
 }
-if (isset($_GET['order'])) {
-    $order = $_GET['order'];
-}
+
 
 require($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
 $range = 6;

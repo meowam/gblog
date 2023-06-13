@@ -10,12 +10,11 @@ require($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
 $user = getNameUser($user['id']);
 ?>
 
-
-<div class="p-3  m-0 border-0 bd-example bd-example-row">
+<div class="p-3  m-0 border-0 bd-example bd-example-row" style="min-height: 550px">
     <div class="elementor-widget-container mb-3 ">
         <h2 class="elementor-heading-title elementor-size-default">Мої пости</h2>
     </div>
-    <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-2 row-cols-xl-3 g-3">
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-2 row-cols-xl-3 g-3" >
         <?php $posts = getPostByUser($user['id']);
         while ($row = mysqli_fetch_assoc($posts)) :
         ?>
